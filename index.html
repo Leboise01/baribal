@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Baribal</title>
+    <link rel="icon" href="./ours.jpg" type="image/x-icon">
+    <style>
+
+        ul {
+            background: radial-gradient(
+                47.2% 50% at 50.39% 88.37%,
+                rgba(255, 255, 255, 0.12) 0%,
+                rgba(255, 255, 255, 0) 100%
+              ),
+              rgba(255, 255, 255, 0.04);
+            position: relative;
+            transition: background 0.3s ease;
+            border-radius: 14px;
+            width: fit-content;
+            height: fit-content;
+            padding: 5px 16px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        ul:hover {
+            background: radial-gradient(
+                47.2% 50% at 50.39% 88.37%,
+                rgba(255, 255, 255, 0.12) 0%,
+                rgba(255, 255, 255, 0) 100%
+              ),
+              rgba(255, 255, 255, 0.08);
+        }
+
+        ul:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 1px;
+            background: linear-gradient(
+              150deg,
+              rgba(255, 255, 255, 0.48) 16.73%,
+              rgba(255, 255, 255, 0.08) 30.2%,
+              rgba(255, 255, 255, 0.08) 68.2%,
+              rgba(255, 255, 255, 0.6) 81.89%
+            );
+            border-radius: inherit;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: xor;
+            -webkit-mask-composite: xor;
+            pointer-events: none;
+        }
+
+
+        a {
+        text-decoration: none;
+        }
+
+
+          .scrollbar-glass {
+            background: radial-gradient(
+                47.2% 50% at 50.39% 88.37%,
+                rgba(255, 255, 255, 0.12) 0%,
+                rgba(255, 255, 255, 0) 100%
+              ),
+              rgba(255, 255, 255, 0.04);
+            position: relative;
+            transition: background 0.3s ease;
+            border-radius: 14px;
+            width: fit-content;
+            height: fit-content;
+            padding: 5px 16px;
+            padding-top: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            font-family: system-ui, -apple-system, sans-serif;
+            transition: 0.3s;
+          }
+
+          .scrollbar-glass:hover {
+            background: radial-gradient(
+                47.2% 50% at 50.39% 88.37%,
+                rgba(255, 255, 255, 0.12) 0%,
+                rgba(255, 255, 255, 0) 100%
+              ),
+              rgba(255, 255, 255, 0.08);
+            transition: 0.3s;
+            padding: 10px 26px;
+            padding-top: 20px;
+            transition: 0.3s;
+          }
+
+          .scrollbar-glass::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 1px;
+            background: linear-gradient(
+              150deg,
+              rgba(255, 255, 255, 0.48) 16.73%,
+              rgba(255, 255, 255, 0.08) 30.2%,
+              rgba(255, 255, 255, 0.08) 68.2%,
+              rgba(255, 255, 255, 0.6) 81.89%
+            );
+            border-radius: inherit;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: xor;
+            -webkit-mask-composite: xor;
+            pointer-events: none;
+          }
+
+          .divider {
+            margin-top: auto;
+            border: none;
+            height: 1px;
+            background-color: currentColor;
+            opacity: 0.1;
+            mask-image: linear-gradient(to right, transparent, black, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black, transparent);
+          }
+
+
+    
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to left, black, #3B2A27, #5E433E, #704F4A);
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #86889E;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            margin: auto;
+        }
+
+        .container2 {
+            max-width: 250px;
+            padding: 20px;
+            background-color: #ABABAB;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            transition: 0.5s;
+        } 
+
+        .container2:hover {
+            background-color: #8A8A8A;
+            transition: 0.3s;
+        }
+
+        .image-avec-ombre {
+            width: 300px;
+            height: auto;
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+        }
+
+        .text-position {
+            text-align: left;
+            margin-left: 15%;
+
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+
+        h4 {
+            text-align: center;
+            line-height: 1.6;
+            color: #666;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+
+
+        <ul>
+                  
+            <a href="https://baribal.w3spaces.com/"><div class="scrollbar-glass">Accueil<hr class="divider"/></div></a>
+            <br>
+            <a href="./page_de_photos.html"><div class="scrollbar-glass">Photos<hr class="divider"/></div></a>
+            <br>
+            <a href="./page_de_dates.html"><div class="scrollbar-glass">Calendrier annuel<hr class="divider"/></div></a>
+            <br>
+            <a href="./page_de_suggestion.html"><div class="scrollbar-glass">Suggestions<hr class="divider"/></div></a>
+        </ul>
+
+
+        <div class="container">
+            <h1>Bienvenue sur le site internet du Baribal</h1>
+            <p>Sur ce blog, vous avez accès aux photos des sortie,camps et week-ends et vous pouvez les télécharger.<br> Si vous possédez des photos, faites le moi savoir.<br>Les dates des activités sont mises à jour en fonction des rectifications de Louis et de Jack les plus récentes</p>
+        </div>
+
+        <img src="./accueil.jpeg" width="200" height="200" class="image-avec-ombre">
+
+    </div>
+
+
+
+    <div class="container2">Prochaine activité: <br>weekend de patrouille du 14 au 15 juin.</div>
+    
+    <h4 class="text-position">Sur ce site commun à la patrouille du Baribal, les informations importantes sont publiées.<br>Dans la page de photos, les photos de chaque sortie, week end ou camps sont publiées séparément dans des conteneurs déroulants.<br></h4>
+
+
+</body>
+</html>

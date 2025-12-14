@@ -1,0 +1,332 @@
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos des activités</title>
+    <link rel="icon" href="./ours.jpg" type="image/x-icon">
+    <style>
+    
+        ul {
+            background: radial-gradient(
+                47.2% 50% at 50.39% 88.37%,
+                rgba(255, 255, 255, 0.12) 0%,
+                rgba(255, 255, 255, 0) 100%
+              ),
+              rgba(255, 255, 255, 0.04);
+            position: relative;
+            transition: background 0.3s ease;
+            border-radius: 14px;
+            width: fit-content;
+            height: fit-content;
+            padding: 5px 16px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            font-family: system-ui, -apple-system, sans-serif;
+            margin-left: 20px;
+            margin-top: 34px;
+        }
+
+        ul:hover {
+            background: radial-gradient(
+                47.2% 50% at 50.39% 88.37%,
+                rgba(255, 255, 255, 0.12) 0%,
+                rgba(255, 255, 255, 0) 100%
+              ),
+              rgba(255, 255, 255, 0.08);
+        }
+
+        ul:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 1px;
+            background: linear-gradient(
+              150deg,
+              rgba(255, 255, 255, 0.48) 16.73%,
+              rgba(255, 255, 255, 0.08) 30.2%,
+              rgba(255, 255, 255, 0.08) 68.2%,
+              rgba(255, 255, 255, 0.6) 81.89%
+            );
+            border-radius: inherit;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: xor;
+            -webkit-mask-composite: xor;
+            pointer-events: none;
+        }
+
+
+        a {
+        text-decoration: none;
+        }
+
+
+          .scrollbar-glass {
+            background: radial-gradient(
+                47.2% 50% at 50.39% 88.37%,
+                rgba(255, 255, 255, 0.12) 0%,
+                rgba(255, 255, 255, 0) 100%
+              ),
+              rgba(255, 255, 255, 0.04);
+            position: relative;
+            transition: background 0.3s ease;
+            border-radius: 14px;
+            width: fit-content;
+            height: fit-content;
+            padding: 5px 16px;
+            padding-top: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            font-family: system-ui, -apple-system, sans-serif;
+            transition: 0.3s;
+          }
+
+          .scrollbar-glass:hover {
+            background: radial-gradient(
+                47.2% 50% at 50.39% 88.37%,
+                rgba(255, 255, 255, 0.12) 0%,
+                rgba(255, 255, 255, 0) 100%
+              ),
+              rgba(255, 255, 255, 0.08);
+            transition: 0.3s;
+            padding: 10px 26px;
+            padding-top: 20px;
+            transition: 0.3s;
+          }
+
+          .scrollbar-glass::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 1px;
+            background: linear-gradient(
+              150deg,
+              rgba(255, 255, 255, 0.48) 16.73%,
+              rgba(255, 255, 255, 0.08) 30.2%,
+              rgba(255, 255, 255, 0.08) 68.2%,
+              rgba(255, 255, 255, 0.6) 81.89%
+            );
+            border-radius: inherit;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: xor;
+            -webkit-mask-composite: xor;
+            pointer-events: none;
+          }
+
+          .scrollbar-glass2 {
+            background: radial-gradient(
+                47.2% 50% at 50.39% 88.37%,
+                rgba(255, 255, 255, 0.12) 0%,
+                rgba(255, 255, 255, 0) 100%
+              ),
+              rgba(255, 255, 255, 0.04);
+            position: relative;
+            transition: background 0.3s ease;
+            border-radius: 14px;
+            width: fit-content;
+            height: fit-content;
+            padding: 5px 16px;
+            padding-top: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            font-family: system-ui, -apple-system, sans-serif;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+          }
+
+          .scrollbar-glass2 p {
+            text-transform: none;
+            color: #BFBFBF;
+            }
+
+          .scrollbar-glass2 img {
+            width: 45%; 
+            height: auto;
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+            border-radius: 10px
+        }
+
+        .scrollbar-glass2 video {
+            width: 45%;
+            height: auto;
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+            border-radius: 10px
+        }
+
+          .scrollbar-glass2:hover {
+            background: radial-gradient(
+                47.2% 50% at 50.39% 88.37%,
+                rgba(255, 255, 255, 0.12) 0%,
+                rgba(255, 255, 255, 0) 100%
+              ),
+              rgba(255, 255, 255, 0.08);
+          }
+
+          .scrollbar-glass2::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 1px;
+            background: linear-gradient(
+              150deg,
+              rgba(255, 255, 255, 0.48) 16.73%,
+              rgba(255, 255, 255, 0.08) 30.2%,
+              rgba(255, 255, 255, 0.08) 68.2%,
+              rgba(255, 255, 255, 0.6) 81.89%
+            );
+            border-radius: inherit;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: xor;
+            -webkit-mask-composite: xor;
+            pointer-events: none;
+          }
+
+          .divider {
+            margin-top: auto;
+            border: none;
+            height: 1px;
+            background-color: currentColor;
+            opacity: 0.1;
+            mask-image: linear-gradient(to right, transparent, black, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black, transparent);
+          }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to left, black, #3B2A27, #5E433E, #704F4A);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            margin-top: 50px;
+            margin-left: 200px;
+            padding: 20px;
+            background-color: #9698b1;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 15px
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .image-avec-ombre {
+            width: 300px;
+            height: auto;
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .summary {
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .summary::-webkit-details-marker {
+          display: none;
+        }
+
+
+
+        .wrapper {
+            display: flex;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        h3 {
+            text-align: center;
+            color: #BFBFBF;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+
+    <ul>
+                  
+            <a href="https://baribal.w3spaces.com/"><div class="scrollbar-glass">Accueil<hr class="divider"/></div></a>
+            <br>
+            <a href="./page_de_photos.html"><div class="scrollbar-glass">photos<hr class="divider"/></div></a>
+            <br>
+            <a href="./page_de_dates.html"><div class="scrollbar-glass">calendrier annuel<hr class="divider"/></div></a>
+            <br>
+            <a href="./page_de_suggestion.html"><div class="scrollbar-glass">suggestions<hr class="divider"/></div></a>
+        </ul>
+
+    <div class="container">
+        <h1>Bienvenue sur la page de photos</h1>
+        <p>Sur cette page, les photos que j'ai prises et que je reçois des parents ou des chefs sont publiées.</p>
+    </div>
+
+
+      
+
+    </div>
+
+
+    <div class="scrollbar-glass2">
+        <details>
+            <summary class="summary"><h3>week-end de troupe du 22 au 23 novembre 2025</h3></summary>
+            <p>Pendant ce week.end de troupe, nous avons mangé un poulet curry en patrouille, avant atelier chant en troupe, puis un jeu de rapidité de construction de table en bois. Nous avons ensuite pris le goûter en patrouille, puis un jeu que Timothée avait préparé pour la troupe. Les patrouilles sont ensuite rentrées dans leur camps pendant les cours d'honneur, où Colomban et Ambroise ont été promus 1ere classe, avec Timothée 2nde classe. Ensuite, repas puis veillée. Lever le lendemain à 6h45, petit déjêuner chaud, et rapidement, une marche vers l'eglise des Bressis.</p>
+
+    <a href="https://postimg.cc/ctW3WtMg" target="_blank"><img src="https://i.postimg.cc/SR2fWWnr/3e0d14ec-9680-405a-972a-6894069f99f6.jpg" alt="3e0d14ec-9680-405a-972a-6894069f99f6"></a> <a href="https://postimg.cc/0KCwy5c6" target="_blank"><img src="https://i.postimg.cc/T1zqQpbc/4dc205e2-b5b8-4b2c-afeb-06adb9d75041.jpg" alt="4dc205e2-b5b8-4b2c-afeb-06adb9d75041"></a> <a href="https://postimg.cc/d7zdWxhy" target="_blank"><img src="https://i.postimg.cc/vBmzmRM3/abd4b064-5c82-4b44-924a-cc384c931bec.jpg" alt="abd4b064-5c82-4b44-924a-cc384c931bec"></a> <a href="https://postimg.cc/mzC9KyMG" target="_blank"><img src="https://i.postimg.cc/gJBKXM2r/ba575ea2-5daf-44b3-9dc7-285998a63ddb.jpg" alt="ba575ea2-5daf-44b3-9dc7-285998a63ddb"></a> <a href="https://postimg.cc/bGKb6BZQ" target="_blank"><img src="https://i.postimg.cc/4d353CZF/d4bcb1a4-e357-454f-b965-f54db01eeb11.jpg" alt="d4bcb1a4-e357-454f-b965-f54db01eeb11"></a> <a href="https://postimg.cc/4HGcGHvL" target="_blank"><img src="https://i.postimg.cc/fytfxxVN/ec69184b-0e19-4c6b-8aa0-adb5c792f4b8.jpg" alt="ec69184b-0e19-4c6b-8aa0-adb5c792f4b8"></a> <a href="https://postimg.cc/jnh7SqZn" target="_blank"><img src="https://i.postimg.cc/5yhqp6zg/GOPR0866.jpg" alt="GOPR0866"></a> <a href="https://postimg.cc/dZ9yVQ4k" target="_blank"><img src="https://i.postimg.cc/8c2BwjvH/GOPR0869.jpg" alt="GOPR0869"></a> <a href="https://postimg.cc/30hGh0CN" target="_blank"><img src="https://i.postimg.cc/BbLBxxjT/Whats-App-Image-2025-12-06-at-17-26-33.jpg" alt="Whats-App-Image-2025-12-06-at-17-26-33"></a>      
+        </details>
+        <hr class="divider"/>
+    </div>
+
+
+
+        <div class="scrollbar-glass2">
+        <details>
+            <summary class="summary"><h3>week-end de patrouille du 11 au 12 octobre 2025</h3></summary>
+            <p>Pendant cette sortie, après la vente des calendriers en vieille ville qui a durée tout le samedi matin, nous sommes allés camper peu loin du lieu de rendez-vous, où nous nous sommes entraînés au froissartage et avons écouté des topos de Colomban et Ambroise, un jeu sur la liturgie et un autre de Baptiste sur la topographie, avant de préparer le repas et de nous coucher tôt, vers 22h. Le lendemain, nous nous sommes levés aux environs de 7h avant la messe de 9h, pour ranger et prendre le petit-déjeuner.</p>
+    <a href="https://postimg.cc/67dwr8rr" target="_blank"><img src="https://i.postimg.cc/hGYjqxh5/Whats-App-Image-2025-10-12-at-18-09-23.jpg" alt="Whats-App-Image-2025-10-12-at-18-09-23"></a> <a href="https://postimg.cc/3yg7XkX9" target="_blank"><img src="https://i.postimg.cc/hGYjqxfF/Whats-App-Image-2025-10-12-at-18-09-24.jpg" alt="Whats-App-Image-2025-10-12-at-18-09-24"></a> <a href="https://postimg.cc/SXWq6n6G" target="_blank"><img src="https://i.postimg.cc/k5H4d8DL/Whats-App-Image-2025-10-12-at-18-09-24-(1).jpg" alt="Whats-App-Image-2025-10-12-at-18-09-24-(1)"></a> <a href="https://postimg.cc/8FhDR7RH" target="_blank"><img src="https://i.postimg.cc/tgcTHP7L/Whats-App-Image-2025-10-12-at-18-09-24-(2).jpg" alt="Whats-App-Image-2025-10-12-at-18-09-24-(2)"></a> <a href="https://postimg.cc/sBpyYMYm" target="_blank"><img src="https://i.postimg.cc/bv5Jjbd7/Whats-App-Image-2025-10-12-at-18-09-25-(1).jpg" alt="Whats-App-Image-2025-10-12-at-18-09-25-(1)"></a> <a href="https://postimg.cc/GBkrF4Fq" target="_blank"><img src="https://i.postimg.cc/QMztr5HG/Whats-App-Image-2025-10-12-at-18-09-25-(2).jpg" alt="Whats-App-Image-2025-10-12-at-18-09-25-(2)"></a> <a href="https://postimg.cc/VSj1qJqM" target="_blank"><img src="https://i.postimg.cc/KYWzyL49/Whats-App-Image-2025-10-12-at-18-09-26.jpg" alt="Whats-App-Image-2025-10-12-at-18-09-26"></a> <a href="https://postimg.cc/mcQRYPYp" target="_blank"><img src="https://i.postimg.cc/430dTtmG/Whats-App-Image-2025-10-12-at-18-09-26-(1).jpg" alt="Whats-App-Image-2025-10-12-at-18-09-26-(1)"></a> <a href="https://postimg.cc/5Hw1BXB7" target="_blank"><img src="https://i.postimg.cc/fbPLhXJN/Whats-App-Image-2025-10-12-at-18-09-26-(2).jpg" alt="Whats-App-Image-2025-10-12-at-18-09-26-(2)"></a> <a href="https://postimg.cc/PLmhWCWc" target="_blank"><img src="https://i.postimg.cc/YSP9wghp/Whats-App-Image-2025-10-12-at-18-09-26-(3).jpg" alt="Whats-App-Image-2025-10-12-at-18-09-26-(3)"></a> <a href="https://postimg.cc/TyrGVKVj" target="_blank"><img src="https://i.postimg.cc/tgcTHP7c/Whats-App-Image-2025-10-12-at-18-09-27.jpg" alt="Whats-App-Image-2025-10-12-at-18-09-27"></a> <a href="https://postimg.cc/SXWq6n6M" target="_blank"><img src="https://i.postimg.cc/k5H4d8Df/Whats-App-Image-2025-10-12-at-18-09-27-(1).jpg" alt="Whats-App-Image-2025-10-12-at-18-09-27-(1)"></a> <a href="https://postimg.cc/Z9rZ8W8p" target="_blank"><img src="https://i.postimg.cc/fbPLhXk2/Whats-App-Image-2025-10-12-at-18-09-27-(2).jpg" alt="Whats-App-Image-2025-10-12-at-18-09-27-(2)"></a> <a href="https://postimg.cc/HVFkbcc9" target="_blank"><img src="https://i.postimg.cc/3xx0523V/9b3c80fa-b199-4950-8399-afa0c5df760e.jpg" alt="9b3c80fa-b199-4950-8399-afa0c5df760e"></a> <a href="https://postimg.cc/2VgSnbbx" target="_blank"><img src="https://i.postimg.cc/Dww4k17R/f220914e-b215-4e6e-bf78-f9ccfe1456b4.jpg" alt="f220914e-b215-4e6e-bf78-f9ccfe1456b4"></a>     
+        </details>
+        <hr class="divider"/>
+    </div>
+
+</body>
+</html>

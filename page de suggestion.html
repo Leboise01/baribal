@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de satisfaction | suggestions</title>
+    <link rel="icon" href="./ours.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./style_du_bouton.css">
+    <style>
+
+
+      ul {
+            background: radial-gradient(
+                47.2% 50% at 50.39% 88.37%,
+                rgba(255, 255, 255, 0.12) 0%,
+                rgba(255, 255, 255, 0) 100%
+              ),
+              rgba(255, 255, 255, 0.04);
+            position: relative;
+            transition: background 0.3s ease;
+            border-radius: 14px;
+            width: fit-content;
+            height: fit-content;
+            padding: 5px 16px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            font-family: system-ui, -apple-system, sans-serif;
+            margin-left: 20px;
+            margin-top: 34px;
+        }
+
+        ul:hover {
+            background: radial-gradient(
+                47.2% 50% at 50.39% 88.37%,
+                rgba(255, 255, 255, 0.12) 0%,
+                rgba(255, 255, 255, 0) 100%
+              ),
+              rgba(255, 255, 255, 0.08);
+        }
+
+        ul:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 1px;
+            background: linear-gradient(
+              150deg,
+              rgba(255, 255, 255, 0.48) 16.73%,
+              rgba(255, 255, 255, 0.08) 30.2%,
+              rgba(255, 255, 255, 0.08) 68.2%,
+              rgba(255, 255, 255, 0.6) 81.89%
+            );
+            border-radius: inherit;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: xor;
+            -webkit-mask-composite: xor;
+            pointer-events: none;
+        }
+
+
+        a {
+        text-decoration: none;
+        }
+
+
+          .scrollbar-glass {
+            background: radial-gradient(
+                47.2% 50% at 50.39% 88.37%,
+                rgba(255, 255, 255, 0.12) 0%,
+                rgba(255, 255, 255, 0) 100%
+              ),
+              rgba(255, 255, 255, 0.04);
+            position: relative;
+            transition: background 0.3s ease;
+            border-radius: 14px;
+            width: fit-content;
+            height: fit-content;
+            padding: 5px 16px;
+            padding-top: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            font-family: system-ui, -apple-system, sans-serif;
+            transition: 0.3s;
+          }
+
+          .scrollbar-glass:hover {
+            background: radial-gradient(
+                47.2% 50% at 50.39% 88.37%,
+                rgba(255, 255, 255, 0.12) 0%,
+                rgba(255, 255, 255, 0) 100%
+              ),
+              rgba(255, 255, 255, 0.08);
+            transition: 0.3s;
+            padding: 10px 26px;
+            padding-top: 20px;
+            transition: 0.3s;
+          }
+
+          .scrollbar-glass::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 1px;
+            background: linear-gradient(
+              150deg,
+              rgba(255, 255, 255, 0.48) 16.73%,
+              rgba(255, 255, 255, 0.08) 30.2%,
+              rgba(255, 255, 255, 0.08) 68.2%,
+              rgba(255, 255, 255, 0.6) 81.89%
+            );
+            border-radius: inherit;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: xor;
+            -webkit-mask-composite: xor;
+            pointer-events: none;
+          }
+
+          .divider {
+            margin-top: auto;
+            border: none;
+            height: 1px;
+            background-color: currentColor;
+            opacity: 0.1;
+            mask-image: linear-gradient(to right, transparent, black, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black, transparent);
+          }
+    
+    
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to left, black, #3B2A27, #5E433E, #704F4A);
+            margin: 0;
+            padding: 0;
+        }
+  
+      .wrapper {
+            display: flex;
+        }
+
+        .center {
+          display: flex;
+          flex-direction: column;
+          margin-left: 200px;
+        }
+
+          h2 {
+      text-align: center;
+      color: #D6D6D6;
+    }
+    
+       form {
+              padding: 20px;
+              width: 100%;
+              max-width: 500px;
+            }
+            label {
+              display: block;
+              margin-bottom: 15px;
+              font-weight: bold;
+              color: #BABABA;
+          }
+          input, textarea {
+              background: none;
+              width: calc(100% - 22px);
+              padding: 10px;
+              margin-bottom: 20px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              font-size: 16px;
+          }
+          textarea {
+            height: 40px;
+            border: 1px solid #000000;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+
+
+
+        <ul>
+                  
+            <a href="https://baribal.w3spaces.com/"><div class="scrollbar-glass">Accueil<hr class="divider"/></div></a>
+            <br>
+            <a href="./page_de_photos.html"><div class="scrollbar-glass">photos<hr class="divider"/></div></a>
+            <br>
+            <a href="./page_de_dates.html"><div class="scrollbar-glass">calendrier annuel<hr class="divider"/></div></a>
+            <br>
+            <a href="./page_de_suggestion.html"><div class="scrollbar-glass">suggestions<hr class="divider"/></div></a>
+        </ul>
+
+        <div class="center">
+
+        <h2>Suggérez moi des améliorations pour le site en remplissant ce formulaire.</h2>
+
+  <form
+  action="https://formspree.io/f/mrbrgkjk"
+  method="POST" onsubmit="setTimeout(() => this.reset(), 0);"
+>
+  <label>
+    Votre nom :
+    <input type="text" name="nom prénom" placeholder="Nom Prénom"></textarea>
+  </label>
+
+  <label>
+    Satisfaction générale :
+    <textarea name="satisfaction générale" placeholder="comment évaluez vous ce site ?"></textarea>
+  </label>
+
+  <label>
+    Design et esthétique
+    <textarea name="design et esthétique" placeholder="Des suggestions sur l'affichage ?"></textarea>
+  </label>
+
+  <label>
+    Suggestions d'amélioration
+    <textarea name="suggestions d'amélioration" placeholder="Des suggestions pour de nouveaux contenus ?"></textarea>
+  </label>
+
+  <label>
+    Correction des fautes
+    <textarea name="correction des fautes" placeholder="Voyez vous des fautes ?"></textarea>
+  </label>
+
+  <label>
+    Diverses suggestions ou questions
+    <textarea name="autre" placeholder="autre"></textarea>
+  </label>
+
+    <button style="--clr:#bcbdcb" class="btn" type="submit"><span>envoyer</span><i></i></button>
+ 
+  <br>
+  <p>En envoyant, le site qui me transmet les réponses (formspree.io) vous notifiera. Vous n'aurez qu'à cliquer sur "retourner au site originel" pour revenir.</p>
+
+  </form>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>
